@@ -32,19 +32,6 @@
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        .loader {
-            margin: 20px auto;
-            border: 6px solid #f3f3f3;
-            border-top: 6px solid #ff6b6b;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
         .graphic {
             margin: 20px auto;
         }
@@ -52,21 +39,20 @@
             max-width: 100%;
             height: auto;
         }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #888;
-        }
     </style>
+    <script>
+        if (window.location.hostname && !window.location.hostname.startsWith("www.")) {
+            window.location.href = "https://www." + window.location.hostname + window.location.pathname;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>We're Under Construction</h1>
         <p>Our website is currently undergoing scheduled updates. We'll be back soon!</p>
         <div class="graphic">
-            <img src="https://via.placeholder.com/400x200.png?text=Under+Construction" alt="Under Construction Graphic">
+            <img src="uc.png" alt="Under Construction">
         </div>
-        <div class="loader"></div>
     </div>
 </body>
 </html>
